@@ -1,0 +1,369 @@
+
+/* Font Families */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+*/
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Comfortaa-Bold';
+    src: url(../fonts/Comfortaa-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'CalibriLight';
+    src: url(../fonts/calibril.ttf);
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url(../fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family:'Lato-Regular';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*
+body {
+    font: 20px/1.5 'Lato-Regular';
+    font-weight: 500;
+}
+*/
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+
+#logo {
+    position: relative;
+    width: 400px;
+    height: auto;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
+
+
+/* make a nav section, display should be none here and should be visible in media */
+
+.navbar {
+    display: none;
+}
+
+header {
+    background-color: transparent;
+    padding: 1.5em;
+    padding-bottom: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 10;
+    font-family: 'Comfortaa';
+}
+
+header ul {
+    position: relative;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+header ul li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    padding: 1em;
+    padding-bottom: 0;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    padding: 5px;
+}
+
+header ul li a:hover {
+    transition: 0.7s;
+    color: turquoise;
+}
+
+header.sticky {
+    background-color: rgba(15, 15, 15, 0.6);
+    /* background-color: rgba(37, 37, 37, 0.1); */
+    /* background-color: rgba(56, 56, 56, 0.1); */
+    padding: 0.5em;
+    padding-bottom: 0.5em;
+    
+}
+
+/* Landing */
+#landing {
+    background: url("../img/home.jpg");
+    height: 110vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    font-family: 'Lato';
+}
+
+.home-text {
+    text-align: center;
+    padding: 23em 0;
+}
+
+.home-text h1 {
+    font-size: 50px;
+}
+
+.home-text a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.home-text a:hover {
+    color: pink;
+    transition: 0.6s;
+}
+
+.home-text a img {
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+.home-text h2 {
+    color: white;
+    font-weight: 300;
+}
+
+
+/* Gallery */
+#gallery {
+    background-color: #FAF8EB;
+    padding: 1.5em 0;
+    margin: 1.5em;
+    font-family: 'Comfortaa-Bold';
+    text-align: center;
+}
+
+#gallery h2 {
+    padding-bottom: 0.5em;
+}
+
+/* About */
+#about {
+    background-color: #FAF8EB;
+    padding: 1.5em 0;
+    margin: 1.5em;
+    text-align: center;
+    font: 17px/1.5 'Lato-Regular';
+}
+
+#about h2 {
+    font-family: 'Comfortaa-Bold';
+    padding-bottom: 0.5em;
+}
+
+#faq {
+    background-color: #FAF8EB;
+    padding: 1.5em 0;
+    margin: 1.5em;
+    font: 17px/1.5 'Lato-Regular';
+}
+
+#faq h2 {
+    font-family: 'Comfortaa-Bold';
+    text-align: center;
+    padding: 1em;
+}
+
+#faq p {
+    text-align: left;
+}
+
+#faq a {
+    text-decoration: none;
+    color: rgb(101, 194, 231);
+    font-family: 'Lato-Bold';
+    font-weight: 100;
+}
+
+#faq a:hover {
+    color: blue;
+    transition: 0.6s;
+}
+
+.questionFont p {
+    font-family: 'Lato-Bold';
+    font-weight: 100;
+}
+
+.bullets ul {
+    padding: 0;
+    margin: 0;
+}
+.bullets li {
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+/* Aftercare */
+#aftercare {
+    background-color: #FAF8EB;
+    padding: 1.5em 0;
+    margin: 1.5em;
+}
+
+#aftercare h2 {
+    font-family: 'Comfortaa-Bold';
+    text-align: center;
+    padding: 0.5em;
+}
+
+
+/* Contact */
+
+#contact {
+    background: url(../img/contact.jpg) 0 -185px;
+    background-size: cover;
+    background-position: 50% 40%;
+    height: 100vh;
+    padding-top: 25vh;
+    text-align: center;
+}
+
+#contact h2 {
+    font: 40px 'Comfortaa-Bold';
+}
+
+#contact p {
+    font: 28px 'Lato-Regular';
+    padding-bottom: 1em;
+}
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.formInput {
+    padding: 3px;
+}
+
+.button {
+    padding-top: 10px;
+}
+
+
+
+@media screen and (max-width: 690px) {
+    header {
+        background-color: transparent;
+        padding: 1.5em;
+        padding-bottom: 1.5em;
+        position: fixed;
+        width: 100vw;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.5s;
+        z-index: 10;
+        font-family: 'Comfortaa';
+    }
+
+    #logo {
+        /* position: absolute; */
+        max-width: 60vw;
+        /* padding-top: 0.5em; */
+        left: 0;
+        right: 0;
+        align-items: center;
+        z-index: 10;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .navbar {
+        display: contents;
+        width: 100%;
+    }
+
+    #navbarToggleExternalContent {
+        padding-top: 1em;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navElements {
+        text-align: center;
+    }
+
+    .navElements a {
+        display: inline-block;
+        color: white;
+        padding: 1.5em;
+        padding-top: 0;
+    }
+
+    #navbarToggleExternalContent a:hover {
+        transition: 0.7s;
+        color: turquoise;
+    }
+
+}
+
+/*
+@media screen and (max-width: 690px) {
+
+
+    .navigation {
+        display: none;
+    }
+}
