@@ -64,20 +64,6 @@ body {
 
 /* Navigation Bar */
 
-@media (max-width: 664px) {
-    /*
-    header ul li a {
-        display:;
-    }
-    */
-
-    /*
-    header {
-        max-width: fit-content;
-    }
-    */
-}
-
 #logo {
     position: relative;
     width: 400px;
@@ -89,6 +75,10 @@ body {
 
 
 /* make a nav section, display should be none here and should be visible in media */
+
+.navbar {
+    display: none;
+}
 
 header {
     background-color: transparent;
@@ -134,7 +124,6 @@ header ul li a {
 header ul li a:hover {
     transition: 0.7s;
     color: turquoise;
-    transition: 0.5s;
 }
 
 header.sticky {
@@ -170,7 +159,6 @@ header.sticky {
 }
 
 .home-text a:hover {
-    
     color: pink;
     transition: 0.6s;
 }
@@ -280,7 +268,7 @@ header.sticky {
     background-size: cover;
     background-position: 50% 40%;
     height: 100vh;
-    padding-top: 32vh;
+    padding-top: 25vh;
     text-align: center;
 }
 
@@ -310,3 +298,72 @@ header.sticky {
     padding-top: 10px;
 }
 
+
+
+@media screen and (max-width: 690px) {
+    header {
+        background-color: transparent;
+        padding: 1.5em;
+        padding-bottom: 1.5em;
+        position: fixed;
+        width: 100vw;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.5s;
+        z-index: 10;
+        font-family: 'Comfortaa';
+    }
+
+    #logo {
+        /* position: absolute; */
+        max-width: 60vw;
+        /* padding-top: 0.5em; */
+        left: 0;
+        right: 0;
+        align-items: center;
+        z-index: 10;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .navbar {
+        display: contents;
+        width: 100%;
+    }
+
+    #navbarToggleExternalContent {
+        padding-top: 1em;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navElements {
+        text-align: center;
+    }
+
+    .navElements a {
+        display: inline-block;
+        color: white;
+        padding: 1.5em;
+        padding-top: 0;
+    }
+
+    #navbarToggleExternalContent a:hover {
+        transition: 0.7s;
+        color: turquoise;
+    }
+
+}
+
+/*
+@media screen and (max-width: 690px) {
+
+
+    .navigation {
+        display: none;
+    }
+}
