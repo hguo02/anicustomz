@@ -377,6 +377,10 @@ header.sticky {
         font-size: 15px;
     }
 
+    .bullets li {
+        font-size: 15px;
+    }
+
     #contact h2 {
         font-size: 28px;
     }
