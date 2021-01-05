@@ -1,346 +1,363 @@
-
-/* Font Families */
-/*
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-*/
-
-@font-face {
-    font-family: 'Comfortaa';
-    src: url(../fonts/Comfortaa-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: 'Comfortaa-Bold';
-    src: url(../fonts/Comfortaa-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'CalibriLight';
-    src: url(../fonts/calibril.ttf);
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url(../fonts/Lato-Thin.ttf);
-}
-
-@font-face {
-    font-family: 'Lato-Bold';
-    src: url(../fonts/Lato-Bold.ttf);
-}
-
-@font-face {
-    font-family:'Lato-Regular';
-    src: url(../fonts/Lato-Regular.ttf);
-}
-
-
-* {
+body {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/*
-body {
-    font: 20px/1.5 'Lato-Regular';
-    font-weight: 500;
-}
-*/
-
-.container {
-    width: 95%;
-    margin: 0 auto;
-}
-
-.container-fluid {
-    width: 85%;
-    margin: 0 auto;
-}
-
-/* Navigation Bar */
-
-#logo {
-    position: relative;
-    width: 400px;
-    height: auto;
-    left: 0;
-    top: 0;
+main {
+    background-image: url('/img/home.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-family: Comfortaa, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-top: 1.5em; 
+    background-color: transparent;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+#primary-navigation ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0.5em;
+    margin: 0;
+}
+
+#primary-navigation ul li {
+    text-align: center;
+    padding: 0.5em;
 }
 
 
-/* make a nav section, display should be none here and should be visible in media */
+#primary-navigation ul li a {
+    font-family: Comfortaa, sans-serif;
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+    /* margin: 0.5em; */
+    padding: 0.5em;
+    transition: color 0.4s;
+}
 
-.navbar {
+#primary-navigation ul li a:hover {
+    color: rgb(116, 233, 217);
+}
+
+#secondary-navigation {
     display: none;
 }
 
-header {
-    background-color: transparent;
-    padding: 1.5em;
-    padding-bottom: 1.5em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: 0.5s;
-    z-index: 10;
-    font-family: 'Comfortaa';
+/* Container */
+
+.item-container {
+    width: 85%;
+    text-align: center;
 }
 
-header ul {
-    position: relative;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+
+/* Navigation Bar */
+nav {
+    transition: background-color 0.5s, padding 0.5s;
 }
 
-header ul li {
-    position: relative;
-    display: inline-block;
-    list-style: none;
-    padding: 1em;
-    padding-bottom: 0;
-}
-
-header ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: larger;
-    padding: 5px;
-}
-
-header ul li a:hover {
-    transition: 0.7s;
-    color: turquoise;
-}
-
-header.sticky {
-    background-color: rgba(15, 15, 15, 0.6);
-    /* background-color: rgba(37, 37, 37, 0.1); */
-    /* background-color: rgba(56, 56, 56, 0.1); */
-    padding: 0.5em;
-    padding-bottom: 0.5em;
+#logo {
+    width: 400px; /* have to unset custom height here ----------------- */
+    height: auto;
+    padding: 0.2em 1em;
     
 }
 
-/* Landing */
-#landing {
-    background: url("../img/home.jpg");
-    height: 110vh;
-    background-size: cover;
-    background-position: 50% 50%;
-    font-family: 'Lato';
+nav.sticky {
+    background-color: rgba(15, 15, 15, 0.6);
+    padding: 0.5em;
+    padding-bottom: 0.5em;
 }
 
-.home-text {
-    text-align: center;
-    padding: 42vh 0;
+
+/* Landing Page */
+
+#instagram-logo {
+    width: 28px;
+    height: auto;
+    margin-right: 0.1em;
 }
 
-.home-text h1 {
-    font-size: 50px;
+#instagram-handle, #slogan {
+    font-family: Lato;
+    font-weight: 100;
+    /* flex-basis: 100%; */
 }
 
-.home-text a {
+#instagram-handle:hover {
+    color: pink;
+    transition: color 0.6s;
+}
+
+#instagram-handle {
+    font-size: 3em;
     text-decoration: none;
+    padding: 0.25em;
     color: lightblue;
 }
 
-.home-text a:hover {
-    color: pink;
-    transition: 0.6s;
-}
-
-.home-text a img {
-    padding-top: 2px;
-    padding-right: 10px;
-}
-
-.home-text h2 {
+#slogan {
+    font-size: 1.75em;
     color: white;
+    margin: 0 auto;
+}
+
+
+/* Gallery Section */
+
+#main-content {
+    /* height: 100vh; */
+    background-color: rgba(134, 134, 134, 0.1);
+    margin: 1.5em;
+}
+
+.main-content-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    padding: 2em;
+    
+}
+
+#left {
+    /* display: inline-block; */
+    flex-basis: 700px;
+    flex-grow: 4;
+    flex-shrink: 1;
+    margin: 1em;
+
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+}
+
+.about-text {
+    padding: 3em;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    /* background-color: rgba(199, 199, 199, 0.3); */
+    background-color: white;
+}
+
+.about-text p {
+    font-family: Lato;
     font-weight: 300;
+    font-size: 17px;
+    /* font-weight: 400; */
 }
 
+#right {
+    flex-basis: 600px;
+    flex-grow: 1;
+    flex-shrink: 2;
+    margin: 1em;
+    min-width: 0;
 
-/* Gallery */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 #gallery {
-    background-color: #FAF8EB;
-    padding: 1.5em 0;
-    margin: 1.5em;
-    font-family: 'Comfortaa-Bold';
-    text-align: center;
+    /* margin: 0; */
+    background-color: rgb(10, 10, 10);
+    display: inline-block;
+    padding: 2em;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    /* flex-shrink: 1; */
 }
 
-#gallery h2 {
-    padding-bottom: 0.5em;
+.faq-text {
+    /* flex-basis: 40%; */
+    background-color: white;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    margin-top: 2em;
+    padding: 3em;
+    font-family: Lato;
+    font-weight: 300;
+    font-size: 17px;
 }
 
-/* About */
-#about {
-    background-color: #FAF8EB;
-    padding: 1.5em 0;
-    margin: 1.5em;
-    text-align: center;
-    font: 17px/1.5 'Lato-Regular';
+.faq-text h2 {
+    padding-bottom: 1em;
 }
 
-#about h2 {
-    font-family: 'Comfortaa-Bold';
-    padding-bottom: 0.5em;
-}
-
-#faq {
-    background-color: #FAF8EB;
-    padding: 1.5em 0;
-    margin: 1.5em;
-    font: 17px/1.5 'Lato-Regular';
-}
-
-#faq h2 {
-    font-family: 'Comfortaa-Bold';
-    text-align: center;
-    padding: 1em;
-}
-
-#faq p {
-    text-align: left;
-}
-
-#faq a {
-    text-decoration: none;
-    color: rgb(101, 194, 231);
-    font-family: 'Lato-Bold';
-    font-weight: 100;
-}
-
-#faq a:hover {
-    color: blue;
-    transition: 0.6s;
-}
-
-.questionFont p {
-    font-family: 'Lato-Bold';
-    font-weight: 100;
-}
-
-.bullets ul {
-    padding: 0;
-    margin: 0;
-}
-.bullets li {
-    text-align: left;
-    list-style-position: inside;
-    padding-left: 2em;
-    padding-right: 2em;
+.bullets {
+    font-family: inherit;
+    font-weight: inherit;
 }
 
 
 /* Aftercare */
+
+iframe {
+    padding: 1em 0;
+}
+
+li > span:nth-of-type(1) {
+    display: none;
+}
+
 #aftercare {
-    background-color: #FAF8EB;
-    padding: 1.5em 0;
-    margin: 1.5em;
+    background-color: white;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 10px;
+    margin-top: 2em;
+    padding: 3em;
+    font-family: Lato;
+    font-weight: 300;
+    font-size: 17px;
+
+    flex-grow: 1;
 }
 
 #aftercare h2 {
-    font-family: 'Comfortaa-Bold';
-    text-align: center;
-    padding: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#aftercare ol li::marker {
+    font-weight: 400;
+    margin: 1em;
+}
+
+#aftercare ol li {
+    padding: 0.5em 1em;
+}
+
+.video-frame {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 
-/* Contact */
+/* Contact Form */
 
-#contact {
-    background: url(../img/contact.jpg) 0 -185px;
-    background-size: cover;
-    background-position: 50% 40%;
-    height: 100vh;
-    padding-top: 25vh;
-    text-align: center;
-}
-
-#contact h2 {
-    font: 40px 'Comfortaa-Bold';
-}
-
-#contact p {
-    font: 28px 'Lato-Regular';
-    padding-bottom: 1em;
-}
-
-.form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.form textarea {
+textarea {
     resize: none;
 }
 
+#contact button {
+    background-color: transparent;
+    margin: 0.75em;
+    padding: 0.5em 2em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, transform 0.4s; 
+}
+
+#contact button:hover {
+    color: white;
+    background-color: black; 
+    box-shadow: 0 2px grey;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+#contact {
+    background-image: url('/img/contact.jpg');
+    background-size: cover;
+    background-position: 50% 40%;
+    height: 100vh;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact h2 {
+    font-size: 2.25em;
+    padding: 0;
+}
+
+#contact p {
+    font-family: Comfortaa, sans-serif;
+}
+
+.contact-form { 
+    margin: 0 auto;
+    width: 400px;
+}
+
 .formInput {
-    padding: 3px;
-}
-
-.button {
-    padding-top: 10px;
+    margin: 0.25rem;
 }
 
 
+/* Footer */
 
-@media screen and (max-width: 690px) {
+/* footer {
+    background-color: rgb(39, 39, 39);
+    height: 200px;
+    width: 100vw;
+} */
 
+
+
+@media (max-width: 768px) {
+    
     /* Navigation Bar */
-    header {
-        background-color: transparent;
-        padding: 1.5em;
-        padding-bottom: 1.5em;
-        position: fixed;
-        width: 100vw;
-        display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        transition: 0.5s;
-        z-index: 10;
-        font-family: 'Comfortaa';
+    nav {
+        justify-content: center;
     }
 
-    #logo {
-        /* position: absolute; */
-        max-width: 60vw;
-        /* padding-top: 0.5em; */
-        left: 0;
-        right: 0;
-        align-items: center;
-        z-index: 10;
-    }
-
-    header ul {
+    #primary-navigation {
         display: none;
     }
 
-    .navbar {
+    #secondary-navigation {
         display: contents;
-        width: 100%;
     }
 
     #navbarToggleExternalContent {
         padding-top: 1em;
-        align-items: center;
         justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav > button:hover {
+        box-shadow: none;
+        background-color: transparent;
+
+    }
+
+    .navbar {
+        display: contents;
+    }
+
+    .navbar-toggler {
+        border: none;
+        margin: 0;
     }
 
     .navElements {
@@ -349,60 +366,155 @@ header.sticky {
 
     .navElements a {
         display: inline-block;
+        font-family: Comfortaa, sans-serif;
+        font-weight: 400;
         color: white;
-        padding: 1.5em;
+        padding: 0.25em;
         padding-top: 0;
-    }
-
-    #navbarToggleExternalContent a:hover {
-        transition: 0.7s;
-        color: turquoise;
+        margin: 0.5em;
     }
 
 
-    /* Font Sizing */
-    .home-text h1 {
-        font-size: 34px;
-    }
-
-    .home-text h2 {
-        font-size: 22px;
-    }
+    /* Font Sizes */
 
     h2 {
-        font-size: 24px;
+        font-size: 1.75em;
     }
 
-    p {
-        font-size: 15px;
+    #instagram-handle {
+        font-size: 2.75em;
+        text-decoration: none;
+        padding: 0.25em;
+        color: lightblue;
+    }
+    
+    #slogan {
+        font-size: 1.6em;
+        color: white;
+        margin: 0 auto;
     }
 
-    .bullets li {
+    .about-text p, .faq-text p, .bullets, #aftercare {
+        font-size: 16px;
+    }
+
+    #contact h2 {
+        font-size: 2em;
+    }
+
+
+    /* Layout */
+    ol {
+        padding: 0 0 0 1.25em;
+    }
+
+}
+
+@media (max-width: 570px) {
+
+
+    #logo {
+        width: 300px; /* have to unset custom height here ----------------- */
+        height: auto;
+        padding: 0.2em 1em;
+    }
+
+    .navElements {
+        width: 85%;
+        margin: 0 auto;
+        /* Make the navigation bar stacked */
+        /* problem is that with smaller size the bar expands on the side */
+
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+    }
+
+    .navElements a {
+        /* display: block; */
+    }
+
+
+    /* Text Size, remove padding from sections */
+    h2 {
+        font-size: 1.5em;
+    }
+
+    #instagram-handle {
+        font-size: 2.25em;
+        text-decoration: none;
+        padding: 0.25em;
+        color: lightblue;
+    }
+    
+    #slogan {
+        font-size: 1.3em;
+        color: white;
+        margin: 0 auto;
+    }
+
+    .about-text p, .faq-text p, .bullets, #aftercare {
         font-size: 15px;
     }
 
     #contact h2 {
-        font-size: 28px;
+        font-size: 1.75em;
     }
 
     #contact p {
-        font-size: 20px;
-        padding-bottom: 0;
+        font-size: 15px;
     }
 
-    .form {
-        max-width: 300px;
+    #contact input, #contact textarea {
+        font-size: 14px;
+        /* width:  */
+    }
+
+    #contact button {
+        font-size: 0.9em;
+        padding: 0.4em 1.6em;
+    }
+
+    .contact-form { 
+        margin: 0 auto;
+        width: 300px;
+    }
+
+
+    /* Layout Changes */
+    #main-content {
+        /* height: 100vh; */
+        background-color: rgba(134, 134, 134, 0.1);
+        padding: 0.5em;
+        /* margin: 1.5em; */
+        margin: 0em;
+    }
+    
+    .main-content-flex {
+        padding: 0;
+        margin: 0;
+    }
+
+    #gallery {
+        padding: 1.5em;
+    }
+
+    .video-frame { 
         margin: 0 auto;
     }
 
 }
 
-/*
-@media screen and (max-width: 690px) {
+@media (max-width: 500px) {
+    li > span:nth-of-type(1) {
+        display: contents;
+    }
 
+    li > span:nth-of-type(2) {
+        display: none;
+    }
 
-    .navigation {
+    iframe {
         display: none;
     }
 }
-*/
