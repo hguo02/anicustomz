@@ -5,7 +5,7 @@
     $messageSubject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to = "anika.ho185@gmail.com";
+    $to = "email";
     $body = "";
     
 
